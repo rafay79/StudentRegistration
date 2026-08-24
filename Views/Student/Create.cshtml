@@ -1,0 +1,493 @@
+﻿@model StudentRegistration.Models.Student
+
+@{
+    ViewData["Title"] = "Register Student";
+}
+
+<div class="registration-page">
+
+    <div class="registration-card">
+
+        <!-- Header -->
+
+        <div class="registration-header">
+
+            <div class="header-icon">
+                🎓
+            </div>
+
+            <div>
+                <span class="eyebrow">STUDENT PORTAL</span>
+
+                <h1>Register New Student</h1>
+
+                <p>
+                    Add student information to your academic management system.
+                </p>
+            </div>
+
+        </div>
+
+        <form asp-action="Create" method="post">
+
+            <div asp-validation-summary="ModelOnly"
+                 class="validation-summary">
+            </div>
+
+
+            <!-- Personal Information -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+                    <span class="section-number">01</span>
+
+                    <div>
+                        <h2>Personal Information</h2>
+                        <p>Basic information about the student.</p>
+                    </div>
+                </div>
+
+
+                <div class="form-grid">
+
+                    <!-- First Name -->
+
+                    <div class="form-group">
+
+                        <label asp-for="FirstName"></label>
+
+                        <input asp-for="FirstName"
+                               class="form-control"
+                               placeholder="Enter first name" />
+
+                        <span asp-validation-for="FirstName"
+                              class="validation-message">
+                        </span>
+
+                    </div>
+
+
+                    <!-- Last Name -->
+
+                    <div class="form-group">
+
+                        <label asp-for="LastName"></label>
+
+                        <input asp-for="LastName"
+                               class="form-control"
+                               placeholder="Enter last name" />
+
+                        <span asp-validation-for="LastName"
+                              class="validation-message">
+                        </span>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label asp-for="Email"></label>
+
+                        <input asp-for="Email"
+                               class="form-control"
+                               placeholder="student@example.com" />
+
+                        <span asp-validation-for="Email"
+                              class="validation-message">
+                        </span>
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="form-group">
+
+                        <label asp-for="Phone"></label>
+
+                        <input asp-for="Phone"
+                               class="form-control"
+                               placeholder="+92 300 1234567" />
+
+                        <span asp-validation-for="Phone"
+                              class="validation-message">
+                        </span>
+
+                    </div>
+
+
+                    <!-- Date of Birth -->
+
+                    <div class="form-group">
+
+                        <label asp-for="DateOfBirth"></label>
+
+                        <input asp-for="DateOfBirth"
+                               class="form-control" />
+
+                        <span asp-validation-for="DateOfBirth"
+                              class="validation-message">
+                        </span>
+
+                    </div>
+
+
+                    <!-- Gender -->
+
+                    <div class="form-group">
+
+                        <label asp-for="Gender"></label>
+
+                        <select asp-for="Gender"
+                                class="form-control">
+
+                            <option value="">
+                                Select gender
+                            </option>
+
+                            <option value="Male">
+                                Male
+                            </option>
+
+                            <option value="Female">
+                                Female
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                        <span asp-validation-for="Gender"
+                              class="validation-message">
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Academic Information -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">02</span>
+
+                    <div>
+                        <h2>Academic Information</h2>
+                        <p>Enter the student's academic details.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <!-- Student ID -->
+
+                    <div class="form-group">
+
+                        <label asp-for="StudentId"></label>
+
+                        <input asp-for="StudentId"
+                               class="form-control"
+                               placeholder="e.g. SE-2026-001" />
+
+                        <span asp-validation-for="StudentId"
+                              class="validation-message">
+                        </span>
+
+                    </div>
+
+
+                    <!-- Course -->
+
+                    <div class="form-group">
+
+                        <label asp-for="Course"></label>
+
+                        <select asp-for="Course"
+                                class="form-control">
+
+                            <option value="">
+                                Select course
+                            </option>
+
+                            <option value="Software Engineering">
+                                Software Engineering
+                            </option>
+
+                            <option value="Computer Science">
+                                Computer Science
+                            </option>
+
+                            <option value="Information Technology">
+                                Information Technology
+                            </option>
+
+                            <option value="Artificial Intelligence">
+                                Artificial Intelligence
+                            </option>
+
+                            <option value="Data Science">
+                                Data Science
+                            </option>
+
+                        </select>
+
+                        <span asp-validation-for="Course"
+                              class="validation-message">
+                        </span>
+
+                    </div>
+
+
+                    <!-- Semester -->
+
+                    <div class="form-group">
+
+                        <label asp-for="Semester"></label>
+
+                        <select asp-for="Semester"
+                                class="form-control">
+
+                            <option value="">
+                                Select semester
+                            </option>
+
+                            <option value="1st Semester">1st Semester</option>
+                            <option value="2nd Semester">2nd Semester</option>
+                            <option value="3rd Semester">3rd Semester</option>
+                            <option value="4th Semester">4th Semester</option>
+                            <option value="5th Semester">5th Semester</option>
+                            <option value="6th Semester">6th Semester</option>
+                            <option value="7th Semester">7th Semester</option>
+                            <option value="8th Semester">8th Semester</option>
+
+                        </select>
+
+                        <span asp-validation-for="Semester"
+                              class="validation-message">
+                        </span>
+
+                    </div>
+
+
+                    <!-- Enrollment Date -->
+
+                    <div class="form-group">
+
+                        <label asp-for="EnrollmentDate"></label>
+
+                        <input asp-for="EnrollmentDate"
+                               class="form-control" />
+
+                        <span asp-validation-for="EnrollmentDate"
+                              class="validation-message">
+                        </span>
+
+                    </div>
+
+
+                    <!-- Previous Education -->
+
+                    <div class="form-group full-width">
+
+                        <label asp-for="PreviousEducation"></label>
+
+                        <input asp-for="PreviousEducation"
+                               class="form-control"
+                               placeholder="e.g. Intermediate, A-Levels, Diploma" />
+
+                        <span asp-validation-for="PreviousEducation"
+                              class="validation-message">
+                        </span>
+
+                    </div>
+
+
+                    <!-- Skills -->
+
+                    <div class="form-group full-width">
+
+                        <label asp-for="Skills"></label>
+
+                        <input asp-for="Skills"
+                               class="form-control"
+                               placeholder="e.g. C#, ASP.NET Core, SQL, JavaScript" />
+
+                        <span asp-validation-for="Skills"
+                              class="validation-message">
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Address -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">03</span>
+
+                    <div>
+                        <h2>Address</h2>
+                        <p>Where the student currently lives.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group full-width">
+
+                        <label asp-for="Address"></label>
+
+                        <input asp-for="Address"
+                               class="form-control"
+                               placeholder="Enter complete address" />
+
+                        <span asp-validation-for="Address"
+                              class="validation-message">
+                        </span>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label asp-for="City"></label>
+
+                        <input asp-for="City"
+                               class="form-control"
+                               placeholder="e.g. Karachi" />
+
+                        <span asp-validation-for="City"
+                              class="validation-message">
+                        </span>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label asp-for="Country"></label>
+
+                        <input asp-for="Country"
+                               class="form-control"
+                               placeholder="e.g. Pakistan" />
+
+                        <span asp-validation-for="Country"
+                              class="validation-message">
+                        </span>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label asp-for="PostalCode"></label>
+
+                        <input asp-for="PostalCode"
+                               class="form-control"
+                               placeholder="e.g. 74000" />
+
+                        <span asp-validation-for="PostalCode"
+                              class="validation-message">
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- About -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">04</span>
+
+                    <div>
+                        <h2>Additional Information</h2>
+                        <p>Tell us a little more about the student.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label asp-for="AboutStudent"></label>
+
+                    <textarea asp-for="AboutStudent"
+                              class="form-control textarea"
+                              rows="5"
+                              placeholder="Write a short description...">
+                    </textarea>
+
+                    <span asp-validation-for="AboutStudent"
+                          class="validation-message">
+                    </span>
+
+                </div>
+
+
+                <div class="terms">
+
+                    <input asp-for="AcceptTerms"
+                           type="checkbox" />
+
+                    <label asp-for="AcceptTerms">
+                        I confirm that the information provided above is accurate.
+                    </label>
+
+                </div>
+
+            </section>
+
+
+            <!-- Submit -->
+
+            <div class="form-actions">
+
+                <a asp-controller="Home"
+                   asp-action="Index"
+                   class="cancel-btn">
+                    Cancel
+                </a>
+
+                <button type="submit"
+                        class="submit-btn">
+                    Create Student
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
