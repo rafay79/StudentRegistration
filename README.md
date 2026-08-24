@@ -37,7 +37,7 @@ This project demonstrates a complete CRUD-based web application where users can 
 | LocalDB | Local Development Database |
 | HTML5 | Page Structure |
 | CSS3 | Styling |
-| Bootstrap / Custom CSS | UI Design |
+| CSS3/Custom CSS | UI Design |
 | LINQ | Data Querying |
 | Git & GitHub | Version Control |
 
